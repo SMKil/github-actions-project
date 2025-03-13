@@ -5,10 +5,12 @@ import pluginJs from '@eslint/js';
 export default [
   {
     files: ['**/*.js'],
-    languageOptions: { sourceType: 'commonjs' },
+    languageOptions: {
+      sourceType: 'commonjs',
+      globals: globals.node,
+    },
     env: { node: true, jest: true },
     plugins: ['prettier'],
+    ...pluginJs.configs.recommended, // ✅ Merge recommended configs here
   },
-  { languageOptions: { globals: globals.node } },
-  pluginJs.configs.recommended,
 ];
