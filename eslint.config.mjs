@@ -9,7 +9,7 @@ export default [
       sourceType: 'commonjs',
       globals: globals.node,
     },
-    env: { node: true, jest: true },
+
     plugins: ['prettier'],
     ...pluginJs.configs.recommended, // ✅ Merge recommended configs here
   },
