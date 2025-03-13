@@ -10,7 +10,9 @@ export default [
       globals: globals.node,
     },
 
-    plugins: ['prettier'],
-    ...pluginJs.configs.recommended, // ✅ Merge recommended configs here
+    plugins: {
+      prettier: pluginObject,
+      ...pluginJs.configs.recommended, // ✅ Merge recommended configs here
+    },
   },
 ];
